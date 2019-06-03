@@ -20,6 +20,9 @@ function findById(id) {
 function insert(project) {
     return db('project')
     .insert(project)
+    .then(() => {
+        return project
+    })
 }
 
 function remove(id) {
